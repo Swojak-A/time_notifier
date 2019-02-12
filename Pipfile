@@ -7,6 +7,7 @@ verify_ssl = true
 
 [packages]
 py2exe = "*"
+pygame = "*"
 
 [requires]
 python_version = "3.4"
