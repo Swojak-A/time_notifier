@@ -2,10 +2,11 @@ import datetime
 from time import sleep
 from pygame import mixer
 
+
+
 class TimeNotifier:
     def __init__(self):
         pass
-
 
 
 
@@ -13,10 +14,10 @@ class TimeNotifier:
         while True:
             time_check = datetime.datetime.now()
             print("Present time: {}:{}:{}".format(time_check.hour, time_check.minute, time_check.second))
-            if time_check.minute == 22:
+            if time_check.minute == 18:
                 TimeNotifier.notify(hour=time_check.hour)
+                sleep(30)
             sleep(30)
-
 
 
 
@@ -34,9 +35,6 @@ class TimeNotifier:
         mixer.init()
         mixer.music.load(path)
         mixer.music.play()
-
-        sleep(30)
-
 
 
 
