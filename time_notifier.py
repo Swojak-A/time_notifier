@@ -6,14 +6,19 @@ class TimeNotifier:
     def __init__(self):
         pass
 
+
+
+
     def time_count(self):
         while True:
             time_check = datetime.datetime.now()
             print("Present time: {}:{}:{}".format(time_check.hour, time_check.minute, time_check.second))
             if time_check.minute == 22:
                 TimeNotifier.notify(hour=time_check.hour)
-                sleep(60)
             sleep(30)
+
+
+
 
     @classmethod
     def notify(cls, folder="mp3/", lang="eng-emma/", hour=None):
@@ -29,6 +34,11 @@ class TimeNotifier:
         mixer.init()
         mixer.music.load(path)
         mixer.music.play()
+
+        sleep(30)
+
+
+
 
 if __name__ == "__main__":
     t = TimeNotifier()
