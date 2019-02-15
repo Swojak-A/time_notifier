@@ -5,8 +5,9 @@ from pygame import mixer
 
 
 class TimeNotifier:
-    def __init__(self):
-        pass
+    lang_dict={
+        "eng" : "eng-emma/"
+    }
 
 
 
@@ -14,7 +15,7 @@ class TimeNotifier:
         while True:
             time_check = datetime.datetime.now()
             print("Present time: {}:{}:{}".format(time_check.hour, time_check.minute, time_check.second))
-            if time_check.minute == 18:
+            if time_check.minute == 35:
                 TimeNotifier.notify(hour=time_check.hour)
                 sleep(30)
             sleep(30)
@@ -22,11 +23,14 @@ class TimeNotifier:
 
 
     @classmethod
-    def notify(cls, folder="mp3/", lang="eng-emma/", hour=None):
+    def notify(cls, folder="mp3/", lang=None, hour=None):
         if hour == None:
             file = "test.mp3"
         else:
             file = "{}.mp3".format(str(hour))
+
+        if lang == None:
+            lang = cls.lang_dict["eng"]
 
         path = "{}{}{}".format(folder, lang, file)
 
