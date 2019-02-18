@@ -15,8 +15,8 @@ class TimeNotifier:
         while True:
             time_check = datetime.datetime.now()
             print("Present time: {}:{}:{}".format(time_check.hour, time_check.minute, time_check.second))
-            if time_check.minute == 35:
-                TimeNotifier.notify(hour=time_check.hour)
+            if time_check.minute == 15:
+                TimeNotifier.notify(hour=None)
                 sleep(30)
             sleep(30)
 
