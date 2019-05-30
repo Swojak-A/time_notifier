@@ -15,8 +15,8 @@ for item1 in os.listdir(mp3_dir):
                 mp3_files.append(input)
 
 setup(
-    # windows=['time_notifier.py'], #uncomment to work in background
-    console=['time_notifier.py'], #uncomment to work in console window
+    windows=['time_notifier.py'], #uncomment to work in background
+    # console=['time_notifier.py'], #uncomment to work in console window
     data_files = mp3_files,
     options={
                 "py2exe":{
