@@ -2,3 +2,5 @@
 venv/
 
 test.py
+
+dist/
